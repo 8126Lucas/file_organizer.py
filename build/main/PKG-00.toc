@@ -1,4 +1,4 @@
-('C:\\Users\\lucas\\Desktop\\P\\python\\file_organizer\\build\\main\\main.pkg',
+('C:\\Users\\lucas\\Desktop\\P\\python\\file_organizer\\build\\main\\FileOrganizer.pkg',
  {'BINARY': True,
   'DATA': True,
   'EXECUTABLE': True,

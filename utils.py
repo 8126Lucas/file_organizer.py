@@ -1,3 +1,4 @@
+import sys
 import os
 import shutil
 from pathlib import Path
@@ -15,6 +16,14 @@ DIRECTORIES = {
     "EXECUTABLES": [".exe", ".apk"],
     "PROGRAMMING": [".py", ".c", ".cpp", ".sh", ".rs", ".js", ".html", ".css", ".java", ".h",],
 }
+
+def getCurrentDir():
+    if getattr(sys, 'frozen', False):
+        current_dir = os.path.dirname(sys.executable)
+    else:
+        current_dir = os.path.dirname(os.path.realpath(__file__))
+    print(current_dir)
+    return current_dir
 
 def isEmpty(current_dir):
     if len(os.listdir(current_dir)) == 1:
@@ -52,7 +61,7 @@ def deleteEmptyDirs(current_dir):
             os.rmdir(dir_path)
 
 def organize():
-    current_dir = os.path.dirname(os.path.realpath(__file__))
+    current_dir = getCurrentDir()
     isEmpty(current_dir)
     createDir(current_dir)
     print("\n")
