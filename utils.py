@@ -59,3 +59,5 @@ def organize():
     moveFiles(current_dir)
     print("\n")
     deleteEmptyDirs(current_dir)
+    print("\n\n\nPress ENTER to exit the program...")
+    input()
