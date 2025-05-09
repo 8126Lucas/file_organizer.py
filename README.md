@@ -16,7 +16,7 @@ To install the application just go to ```dist/FileOrganizer.exe``` or to the rel
 ## Development
 If you wish to continue the development just follow these next steps:
 
-```python
+```bash
 # Clone the repository
 git clone https://github.com/8126Lucas/file_organizer.py.git
 
@@ -24,5 +24,7 @@ git clone https://github.com/8126Lucas/file_organizer.py.git
 cd file_organizer.py
 
 # Install dependencies
-pip install shutil
+pip install pyinstaller
+or
+pipx install pyinstaller
 ```
